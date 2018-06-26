@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Assignment 6</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox-buttons.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/fancybox/jquery.fancybox-media.js"></script>
+        <script src="js/fancybox/jquery.fancybox-thumbs.js"></script>
+        <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="js/fancybox/jquery.mousewheel.pack.js"></script>
+        <script src="js/nivo/jquery.nivo.slider.js"></script>
+        <script src="js/nivo/jquery.nivo.slider.pack.js"></script>
+        <script src="js/jbzoom/jqzoom.js"></script>
+    </head>
+    <body>
+        <div class="fancy">
+            <h1>Fancy Box</h1>
+            <a class="fancybox" rel="group" href="img/fancybox/1_b.jpg">
+                <img src="img/fancybox/1_s.jpg" />
+            </a>
+            <a class="fancybox" rel="group" href="img/fancybox/2_b.jpg">
+                <img src="img/fancybox/2_s.jpg" />
+            </a>
+            <a class="fancybox" rel="group" href="img/fancybox/3_b.jpg">
+                <img src="img/fancybox/3_s.jpg" />
+            </a>
+            <a class="fancybox" rel="group" href="img/fancybox/4_b.jpg">
+                <img src="img/fancybox/4_s.jpg" />
+            </a>
+            <a class="fancybox" rel="group" href="img/fancybox/5_b.jpg">
+                <img src="img/fancybox/5_s.jpg" />
+            </a>
+        </div>
+        <h1>Minimal Responsive Slider/Carousel Example</h1>
+            <div class="container">
+                <div class="slide-window">
+                    <div class="slide-wrapper" style="width: 300%;">
+                        <div class="slide">
+                            <a href="#" target="_blank">
+                                <div class="slide-image" style="background-image: url(img/nivo/i1.jpg)">
+                                </div>
+                                <div class="slide-caption">
+                                    <p>Ocean</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="#" target="_blank">
+                                <div class="slide-image" style="background-image: url(img/nivo/i2.jpeg)">
+                                </div>
+                                <div class="slide-caption">
+                                    <p>Sky</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="#" target="_blank">
+                                <div class="slide-image" style="background-image: url(img/nivo/i3.jpg)">
+                                </div>
+                                <div class="slide-caption">
+                                <p>Walf till success </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide-controller">
+                        <div class="slide-control-left">
+                            <div class="slide-control-line"></div>
+                            <div class="slide-control-line"></div>
+                        </div>
+                        <div class="slide-control-right">
+                            <div class="slide-control-line"></div>
+                            <div class="slide-control-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="fancy">
+                <h1>JBZoom</h1>    
+                <ul id="bzoom">
+                    <li>
+                        <img class="bzoom_thumb_image" src="img/jbzoom/a1_s.jpg" />
+                        <img class="bzoom_big_image" src="img/jbzoom/a1_b.jpg" />
+                    </li>
+                    <li>
+                        <img class="bzoom_thumb_image" src="img/jbzoom/a2_s.jpg" />
+                        <img class="bzoom_big_image" src="img/jbzoom/a2_b.jpg" />
+                    </li>
+                    <li>
+                        <img class="bzoom_thumb_image" src="img/jbzoom/a3_s.jpg" />
+                        <img class="bzoom_big_image" src="img/jbzoom/a3_b.jpg" />
+                    </li>
+                    <li>
+                        <img class="bzoom_thumb_image" src="img/jbzoom/a4_s.jpeg" />
+                        <img class="bzoom_big_image" src="img/jbzoom/a4_b.jpeg" />
+                    </li>
+                </ul>
+        </div>
+
+        <script>
+            $(".fancybox")
+            .attr('rel', 'gallery')
+            .fancybox({
+                padding : 0
+            });
+
+            var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-36251023-1']);
+                _gaq.push(['_setDomainName', 'jqueryscript.net']);
+                _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            $("#bzoom").zoom({
+                zoom_area_width: 300,
+                autoplay_interval: 300,
+                small_thumbs: 4,
+                autoplay: false
+            });
+        </script>
+    </body>
+</html>
